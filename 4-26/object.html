@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var obj={}
+        Object.defineProperty(obj,"name",{
+            value:"猜猜我是谁",
+            configurable:false,
+            writable:false,
+            enumerable:true
+            
+            
+        })
+        Object.defineProperty(obj,"sex",{
+            value:"男女",
+            enumerable:true
+        })
+        Object.defineProperty(obj,"age",{
+            value:"100",
+            enumerable:false
+        })
+        for(k in obj){
+          console.log(k)
+        }
+        delete obj.name
+        obj.name="呵呵"
+        // console.log(obj.name)
+        // console.log(obj.sex)
+        // console.log(obj.age)
+        console.log(obj)
+        console.log(Object.keys(obj))
+        
+        
+    </script>
+</body>
+</html>
