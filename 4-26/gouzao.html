@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var p1=new Array()
+        // console.log(p1)
+        var p2=new Object()
+        // console.log(p2)
+
+
+
+        function ground(names,age,sex){
+            this.name=names
+            this.age=age
+            this.sex=sex
+        }
+        console.log(typeof ground.prototype)
+        ground.prototype.name="lisi"
+        ground.prototype.age=20
+        ground.prototype.sex="男"
+        var p3=new ground()
+        console.log(p3.name)
+        console.log(p3.age)
+        console.log(p3.sex)
+        
+        var p4=new ground("zhangsan",30,"女")
+        console.log(p4)
+    //     function back(){
+    //         this.name="李白"
+    //         this.age=60
+    //         this.sex="男"
+    //     }
+    //     var a=new back()
+    //    console.log(a.name)
+    </script>
+</body>
+</html>
