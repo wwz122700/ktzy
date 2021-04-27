@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function add(){
+        //     return "哈哈哈哈哈哈"
+        // }
+        // function text(){
+        //     return add
+        // }
+        // var back=text()
+        // console.log(back())
+        var a="嘿嘿嘿嘿嘿"
+        var b="滋滋"
+        function add(){
+         
+            function adda(){
+            //   console.log(a)
+            return a
+            }
+            return adda
+        }
+       console.log(add()())
+    </script>
+</body>
+</html>
