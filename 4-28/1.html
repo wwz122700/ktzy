@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="A">
+    <input type="button" value="B">
+    <input type="button" value="C">
+    <input type="button" value="D">
+    <input type="button" value="E">
+</body>
+<script>
+    var but=document.querySelectorAll("input[type='button']")
+    for(let i=0;i<but.length;i++){
+        // but[i].index=i
+        but[i].onclick=function(){
+          alert(i)
+     }
+    }
+
+  
+    console.log(but)
+</script>
+</html>
