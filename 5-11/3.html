@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <button class="btn" @click="cli">点击</button>
+    <button class="btn2" v-on:click="cli2">点击</button>
+    <script>
+        var btn = new Vue({
+            el:".btn , .btn2",
+            data:{},
+            methods:{
+                cli(){
+                    let a="哈哈哈哈"
+                    alert(a)
+                },
+              
+            }
+        })
+        var btn2 = new Vue({
+            el:".btn2",
+            data:{},
+            methods:{
+                cli2(){
+                    alert(345)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

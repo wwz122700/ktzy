@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <script src="../jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- <div id="app">
+        <ul>
+            <li v-for="v in list">{{v.name}}^{{v.sex}}</li>
+        </ul>
+    </div> -->
+    <table id="app" border="1px">
+        <tr>
+            <th>名称</th>
+            <th>性别</th>
+            <th>操作</th>
+        </tr>
+        <tr v-for="v in list">
+            <th>{{v.name}}</th>
+            <th>{{v.sex}}</th>
+            <th><b id="b" v-on:click="cli2">删除</b>|<a href="">编辑</a></th>
+        </tr>
+    </table>
+    <script>
+        var app =new Vue({
+             el:"#app",
+             data:{
+                 list:[
+                     {name:"唐僧",sex:"男"},
+                     {name:"葫芦哇",sex:"男"},
+                     {name:"玛卡巴卡",sex:"女"}
+                 ]
+             },
+             methods:{
+                cli2(){
+                   $(this).remove.parent.parent
+                }
+            }
+        })
+        // var b = new Vue({
+        //     el:"#b",
+        //     data:{},
+        //     methods:{
+        //         cli2(){
+        //             alert(345)
+        //         }
+        //     }
+        // })
+    </script>
+</body>
+</html>

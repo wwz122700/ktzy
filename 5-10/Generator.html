@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function * f1(){
+        //     yield "aa",
+        //     yield "bb",
+        //     yield "cc"
+        // }
+        // for(v of f1()){
+        //     console.log(v)
+        // }
+        // let fun=f1()
+        // console.log(fun.next())
+        // console.log(fun.next())
+        // console.log(fun.next())
+
+        // let obj={
+        //     name:"zhangsana",
+        //     age:30,
+        //     sex:"男"
+        // }
+        // function * it(){
+        //    for(v in this){
+        //        yield this[v]
+        //    }
+        // }
+
+        // Object.prototype[Symbol.iterator]=it
+        // for(v of obj){
+        //     console.log(v)
+        // }
+
+    //     var obj2={}
+    //     obj2[Symbol.iterator]=function * fun(){
+    //     yield 1
+    //     yield 2
+    //     yield 3
+    //     }
+    //     var arr=[...obj2]
+    //    for(v of arr){
+    //       console.log(v)
+    //    }
+
+    var obj={
+        name:"lsii",
+        age:30,
+        sex:"男"
+    }
+    function * it(){
+        for(let v in this){
+            console.log(this[v])
+        }
+    }
+    Object.prototype[Symbol.iterator]=it
+    
+    for(v of obj){
+        console.log(obj)
+    }
+    // console.log(obj)
+
+    </script>
+</body>
+</html>
