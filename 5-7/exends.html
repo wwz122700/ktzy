@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class A{
+            constructor(name,age){
+           this.name=name,
+           this.age=age
+            }
+            v(){
+                console.log(567890)
+            }
+        }
+
+        class B extends A{
+          mm(){
+              console.log("hello")
+          }
+        }
+        
+        class C extends B{
+
+        }
+        let obj2=new C()
+        obj2.v()
+        obj2.mm()
+    </script>
+</body>
+</html>

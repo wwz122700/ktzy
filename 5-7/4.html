@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let obj={name:"lisi"}
+        // let obj1={age:"zhangsan"}
+        // console.log(obj)
+        // let onj2=Object.assign(obj,obj1)
+        // console.log(onj2)
+        // let obj={
+        //     // name:"lisi",
+        //     // age:30
+        // }b
+        // // let obj2=Object.getPrototypeOf(obj) 
+        // console.log(Object.setPrototypeOf(obj))
+
+        let a={
+            name:"lisi"
+        }
+        let b={
+            name:"zhanshan",
+            cc(){
+             return "hello"
+            }
+        }
+        console.log(b)
+       let c=Object.create(b)
+      Object.setPrototypeOf(c,b)
+       console.log(c.cc())
+       Object.setPrototypeOf(c,b)
+       console.log(Object.getPrototypeOf(a))
+    </script>
+</body>
+</html>
