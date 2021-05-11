@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1=[11,22,33,44,55,66]
+        // for(v of arr1){
+        //      console.log(v)
+        // }
+        // console.log(Array.prototype)
+        // var ti=arr1[Symbol.iterator]()
+        // console.log(ti.next())
+        // console.log(ti.next())
+        // console.log(ti.next())
+        // console.log(ti.next())
+        // console.log(ti.next())
+        // console.log(ti.next())
+
+        // var set=new Set()
+        // set.add(77)
+        // set.add(88)
+        // set.add(99)
+        // set.add(00)
+        // set.add(90)
+        // var c=set[Symbol.iterator]()
+        // console.log(c.next())
+        // console.log(c.next())
+        // console.log(c.next())
+        // console.log(c.next())
+        // console.log(c.next())
+        // console.log(c.next())
+
+        var obj1={
+            name:"zhangsan",
+            age:30,
+            sex:"男",
+            email:"310qq@.com",
+        }
+        obj1[Symbol.iterator]=function(){
+            let keyArr=Object.keys(obj1)
+            let index=0
+            return{
+                next(){
+                     return index<keyArr.length ? {
+                         value:{
+                             key:keyArr[index],
+                             val:obj1[keyArr[index++]]
+                         }
+                     }:{
+                         done:true
+                     }
+                }
+            }
+        }
+      for (let key of obj1){
+          console.log(key)
+      }
+    </script>
+</body>
+</html>

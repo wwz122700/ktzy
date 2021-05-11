@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj1={
+            name:"zhangsan",
+            age:30,
+            sex:"女",
+            num(){
+              return "函数"
+            }
+        }
+        // let num=function(){
+        //      return "函数"
+        // }
+        
+      let p1 = new Proxy(obj1,{
+        //   读拦截
+            get(t,p){
+                console.log("读取了"+p+"属性")
+            },
+            // 写拦截
+            set(t,p,f,r){
+               console.log("拦截的对象",t)//拦截的对象
+               console.log("拦截对象的属性",p)//拦截对象的属性
+               console.log("写属性的值",f)//写属性的值
+               console.log("Proxy对象",r)//Proxy对象
+            },
+
+            // 拦截 in 操作
+            has(t,p){
+              console.log("拦截in：",p)
+            },
+
+            // 拦截delete操作
+            
+            deleteProperty(t,p){
+             console.log("拦截了delete:",p)
+            },
+
+            // 拦截函数调用
+            apply(t,o,a){
+             console.log(t)
+             console.log(o)
+             console.log(a)
+            }
+        })
+        // p1.num()
+        // let fun=new Proxy(num,{
+        //     apply(t,o,a){
+        //      console.log(t)
+        //     }
+        // })
+        // p1.num()
+        // console.log(p1.num())
+        // delete p1.age
+        // console.log("name" in p1)
+    //    p1.name="lisi"
+
+    </script>
+</body>
+</html>
